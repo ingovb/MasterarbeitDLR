@@ -1,0 +1,13 @@
+\select@language {german}
+\select@language {german}
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Aim and Motivation}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Structure of Thesis}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Mathematical Premise}{5}{section.2}
+\contentsline {section}{\numberline {3}Summary}{6}{section.3}
+\contentsline {section}{\numberline {4}Appendix}{7}{section.4}
+\contentsline {section}{List of Figures}{8}{section*.3}
+\contentsline {section}{List of Abbreviations}{9}{section*.4}
+\contentsline {section}{List of Symbols}{10}{section*.5}
+\contentsline {section}{Bibliography}{11}{section*.5}

@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Bachelors Thesis
+% Author: Ingo von Bargen
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% % Preamble BEGINN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%% Preamble (Pakete)
+%\input{preamble/pre-packages}
+
+%%% Neue Befehle
+%\input{preamble/pre-newcommands}
+%\input{preamble/pre-tablecommands} % Fuer Tabellen
+
+%%% Silbentrennung
+%\input{preamble/pre-hyphenation}
+
+
+%\bibliography{bib/bib.bib}
+%\addbibresource{bib/literatur.bib}
+
+% % Preamble ENDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------Document Settings--------------%
+%%% Preamble (Dokumentenklasse)
+\input{preamble/pre-class}
+
+%--------------Includes--------------%
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xspace} % Define commands that don't eat spaces.
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{url}
+\usepackage{MnSymbol}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfig}
+\usepackage[hidelinks]{hyperref}
+
+
+
+\graphicspath{{fig/Acc_Calib/}}
+\graphicspath{{fig/Simulaton/}}
+\graphicspath{{fig/Platform/}}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{listings}
+\lstset{language=C,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	commentstyle=\color{OliveGreen},
+	frame=single,
+	tabsize=2,
+	showstringspaces=false,
+	breaklines=true,
+	basicstyle=\tiny,
+}
+
+
+%Change Max Matrix columns to 20 (Default is 10)
+\setcounter{MaxMatrixCols}{20}
+
+%3D Plot
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage{3dplot} %requires 3dplot.sty to be in same directory, or in your LaTeX installation
+\usepackage[active,tightpage]{preview}  %generates a tightly fitting 
+\tdplotsetmaincoords{60}{110}
+
+%Format equation numbering
+\usepackage{chngcntr}
+\counterwithin{equation}{section}
+
+
+%%% Alle Namen usw. im Titel und im hyperref-Paket
+\input{preamble/pre-work}
+
+%\makeatletter
+%\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+%  \hskip -\arraycolsep
+%  \let\@ifnextchar\new@ifnextchar
+%  \array{#1}}
+ 
+%\begin{pmatrix}[cc|c]
+%  1 & 2 & 3\\
+%  4 & 5 & 9
+%\end{pmatrix}
+
+%--------------Own Commands--------------%
+\newcommand{\vlinespace}[1]{\vspace*{#1\baselineskip}} % Abstand
+\newcommand{\titleemph}[1]{\textbf{#1}} % Hervorheben
+\newcommand{\bmath}[1]{\mathbf{#1}}
+\newcommand{\bsymb}[1]{\boldsymbol{#1}}
+
+%--------------Geometry--------------%
+ \geometry{
+ left=30mm,
+ right=20mm,
+ top=25mm,
+ bottom=25mm,
+ }
+ 
+ \parindent 0pt % Einrücken einer neuen Zeile verhindern
+ 
+%--------------Footer--------------%
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\workNameStudent}
+\rhead{\workHochschule}
+\rfoot{\thepage}
+
+%\documentclass[tikz,border=2mm]{standalone}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% START DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%--------------Title Page--------------%
+\include{Chapters/Title}
+\newpage
+
+%--------------Abstract--------------%
+\include{Chapters/Abstract}
+%--------------Table of contents--------------%
+\tableofcontents
+%\contentsline {section}{\numberline {2}Structure of the Table of Contents}{3}
+
+% Main Document
+%-----------------------------------------------------------------
+\include{Chapters/Introduction}
+\include{Chapters/UsedMath}
+
+%...
+
+\include{Chapters/Summary}
+\include{Chapters/Appendix}
+
+
+
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+
+\include{Glossary/Abbrev}
+
+\include{Glossary/Symbols}
+
+
+% Bibliography
+%-----------------------------------------------------------------
+\addcontentsline{toc}{section}{Bibliography}
+\begin{thebibliography}{99}
+
+%\bibitem{C1} 25.12.14, \url{http://en.wikipedia.org/wiki/Kalman_filter}
+
+\bibitem{C2} Norbert Schmitz, \emph{Satellitenortung und Sensorfusion zur Lokalisierung von Fahrzeugen in unstrukturierter Umgebung}, Diplomarbeit, (2005)
+
+\bibitem{C3} Murali Rajaa Rajamani, \emph{Data-based Techniques to Improve State Estimation in Model Predictive Control}, Dissertation, 2007
+
+\bibitem{C4} Christian Ascher, \emph{Modulares multisensorielles Indoor Navigationssystem}, Book
+
+\bibitem{WENDEL} Jan Wendel, \emph{Integrierte Navigationssysteme - Sensordatenfusion, GPS und Inertiale Navigation, 2. Auflage}
+
+\bibitem{KFWRTA} Charles K. Chui, Guanrong Chen, \emph{Kalman Filtering: with Real-Time Applications}
+
+\bibitem{Maybeck} Maybeck, \emph{Stochastic Models: Estimation and Control: v. 1}
+
+\bibitem{ComSens2} Schmid, K. and Hirschmüller, H. (2013) \emph{Stereo vision and imu based real-time ego-motion and depth image computation on a handheld device} In IEEE International Conference on Robotics and Automation (ICRA), Karlsruhe, Germany.
+
+\bibitem{C5} 27.02.15, \url{http://www.gpo.gov/fdsys/pkg/CFR-2005-title47-vol4/pdf/CFR-2005-title47-vol4-sec73-208.pdf}
+
+\bibitem{ublox_website} 03.01.15, \url{http://www.u-blox.com/en/gps-modules/pvt-modules/neo-m8.html}
+
+\bibitem{MPU6050_pic} 09.01.15, \url{http://www.invensense.com}
+
+\bibitem{GPS_module_pic} 09.01.15, \url{http://www.drotek.fr/shop/511-1613-thickbox_dm/ublox-neo-m8-gps-module.jpg}
+
+\bibitem{PX4FLOW_pic} 	09.01.15, \url{https://pixhawk.org/_detail/modules/px4flow-bottom.jpg?id=modules3Apx4flow}
+
+\bibitem{MS5611_pic} 	09.01.15, \url{http://www.amsys.de/products/ms5611.htm}
+
+\bibitem{HMC5883L} 	05.02.15, \url{https://www.sparkfun.com/products/10494}
+
+\bibitem{atmosp_physics} 15.03.15, \url{http://www.atmosp.physics.utoronto.ca/PHY2509/on9901_ch5.pdf}
+
+\bibitem{ComSens1} 19.03.15, \url{https://pixhawk.org/modules/px4flow}
+
+\bibitem{ComSens3} 19.03.15, \url{http://www.velodynelidar.com}
+
+\bibitem{ComSens4} 19.03.15, \url{http://www.ar-tracking.com/home/}
+
+\bibitem{ComSens5} 19.03.15, \url{http://www.adafruit.com/product/164}
+
+\bibitem{ComSens6} 19.03.15, \url{http://www.lightware.co.za/shop/en/4-laser-rangefinders}
+\end{thebibliography}
+
+
+%--------------Acklnowlegements--------------%
+\include{Chapters/Acknowledgements}
+\newpage
+
+%--------------Erklärung--------------%
+\include{Chapters/Erklaerung}
+
+
+\end{document}

@@ -1,5 +1,4 @@
-*.dmb
-*.rsc
-*.int
-*.lk
+*.aux
+*.log
 *.zip
+*.db

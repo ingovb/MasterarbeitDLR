@@ -1,0 +1,133 @@
+\enquote{}
+\texteuro\
+\textbf{}
+\newpage
+\vspace*{2cm}
+Verweise im Text: \cite{doc:stz} und \cite{doc:gun}.
+\underline{}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{fig/PP/ZGW_Sternkoppler_crop}
+\caption{ZGW-Netzwerk - Beispiel 1}
+\label{fig:ddd}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{fig/ZGW/ZGW_cut_white.jpg}
+\caption{Zentrales Gateway}
+\label{fig:zgw_bild}
+\end{figure}
+
+
+
+\begin{wrapfigure}{r}{7cm}
+	\vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=4cm]{fig/PP/ZGW_Sternkoppler_crop}
+  \end{center}
+  \vspace{-20pt}
+  \caption{ZGW Sternkoppler}
+  \label{fig:ZGW_Sternkoppler_crop}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+
+
+\begin{itemize}
+    \item acht Bauern
+    \item zwei Türme dsfffdfddsdf dsfd sf ds fsdf   dsfdsf df ds fds f dsf d f d fd sf ds f dfds fsd f dsf d f sdf sd f
+    sdfdsfddfds  dsf ds fds f ds ds f sd fd f dsf ds f
+    \item zwei Springer
+    \item zwei Läufer
+    \item eine Dame
+    \item ein König
+  \end{itemize}
+
+
+
+
+\begin{enumerate}
+    \item 
+    \item sdfs
+    \item sdf
+    \item sdf\#
+\end{enumerate}
+
+
+
+\begin{description}
+   \item[\textbf{}] 
+   \item[\textbf{}] 
+   \item[\textbf{}] 
+\end{description}
+
+
+
+\begin{figure}
+\centering
+\lstset{language=[Sharp]C}
+\begin{lstlisting}[frame=tlrb] %, caption={Hallo Welt}, linewidth=\textwidth] %caption={Hallo Welt},linewidth=\textwidth
+XmlDocument doc1 = new XmlDocument();
+doc1.Load(filename); //Einlesen der Datei
+XmlElement root = doc1.DocumentElement;
+XmlNodeList frames = root.GetElementsByTagName("fx:FRAME");
+foreach (XmlNode frame in frames)
+{
+	tbl_frame.FrameID = frame.Attributes.GetNamedItem("ID").Value; //Auslesen der Frame-ID
+}
+	
+fibex4bmw = FIBEX.Load(filename);
+foreach (var frame in fibex4bmw.ELEMENTS.FRAMES.FRAME)
+{
+	tbl_frame.FrameID = frame.ID;
+}
+\end{lstlisting}
+\caption{C-Code2}
+\label{fig:CCode2}
+\end{figure}
+
+
+
+\chapter{Konzeption und Realisierung}
+\label{sec:kur}
+
+
+\section{Anforderung}
+\label{sec:kur-a}
+
+\subsection{Konzept}
+\label{sec:kur-k}
+
+\subsubsection{Realisierung - C}
+\label{sec:real-unterc}
+
+
+
+%\begin{table} [h]
+%	\tablestylecommon
+%    \begin{tabularx}{\textwidth}{ | l | l | l | l | X |} %p{5cm} \begin{tabularx}{\textwidth}{l X}
+%
+%    \hline        
+%    \tablehead \tableheadcolor Pin-Nr. & \tablehead \tableheadcolor Signal & \tablehead \tableheadcolor Funktion %
+%     & \tablehead \tableheadcolor Abschluss-widerstand & \tablehead \tableheadcolor Bemerkung \\ \hline
+%    
+%    \tablebody
+%    44 & CAN-4_H & \multirow{2}{*}{CAN-4 [Highspeed] (D-CAN)} & \multirow{2}{*}{2x68ohm} & \multirow{2}{*}{Im SG terminiert (bis 1 MBit)} \\ \cline{1-2}
+%    45 & CAN-4_L &  &  &  \\ \hline
+%    
+%    \tablebody
+%    44 & CAN-4_H & \multirow{2}{*}{CAN-4 [Highspeed] (D-CAN)} & \multirow{2}{*}{2x68ohm} & \multirow{2}{*}{Im SG terminiert (bis 1 MBit)} \\ \cline{1-2}
+%    45 & CAN-4_L &  &  &  \\ \hline
+%    
+%      
+%   
+%    
+%    \end{tabularx}
+%	\caption{Pinbelegung des Zentralen Gateways}
+%	\label{tab:pin_zgw}
+%\end{table} 
